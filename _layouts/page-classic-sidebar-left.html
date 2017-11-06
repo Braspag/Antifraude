@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include head.html %}
+</head>  
+<body class="has-classic-sidebar-left">
+    <header class="head">
+        {% include nav.html %}
+    </header>
+    {% include search.html %}
+    <div class="margin">
+        <div class="content">
+            <div class="sidebar classic-sidebar">
+                <div class="widget">
+                    {% capture sidebar %}{% include docs/1.0/documentation-sidebar.md %}{% endcapture %} 
+                    {{ sidebar | markdownify }}
+                </div>
+            </div>
+            <div class="content-container">
+                <article>
+                    {% if page.featimg %}
+                    <img class="featimg" src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/{{ page.featimg }}" alt="{{ page.featimg }}">                    
+                    {% endif %}
+
+                    <h1 class="page-title">
+                        {{ page.title }}
+                    </h1>
+                    <div class="post-content">
+                        {{ content }}
+                    </div>
+                </article>
+                <div class="post-nav">
+                    {% if page.previous %}
+                    <a class="btn prev" href="{{ page.previous | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-left"></i><span class="short"> anterior</span></a>                    {% endif %} 
+                    {% if page.next %}
+                    <a class="btn next" href="{{ page.next | prepend: site.baseurl | replace: '//', '/' }}"><span class="short">próximo </span><i class="fa fa-angle-right"></i></a>                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+</body>
+</html>

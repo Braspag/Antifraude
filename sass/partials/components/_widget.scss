@@ -1,0 +1,23 @@
+.widget{
+    box-sizing: border-box;
+    padding: 10px;
+
+    .title{
+        @extend h5;
+    }
+
+    ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li{
+            padding-left: 0px;
+        }
+
+        li::before {
+            content: "› ";
+            color: #c0c0c0;
+        }
+    }
+}

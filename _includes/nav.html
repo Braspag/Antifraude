@@ -1,0 +1,72 @@
+<!-- menu, we did go with a static one, you can build a dynamic one, just google a little around -->
+<div class="main-menu">
+    <div class="content">
+        <nav id="menu">
+            <a class="toggle-link noline"><i class="fa fa-close fa-lg"></i></a>
+            <ul>
+                <li>
+                    <a class="homelink" href="{{ site.baseurl | replace: '//', '/' }}/"><i class="fa fa-shield fa-fw" style="color: #1E1E1E; font-size: 1.2rem;"></i> <span style="color: #1E1E1E; font-weight: 600; font-size: 1.1rem;">ANTIFRAUDE GATEWAY</span></a>
+                </li>
+                <!--<li>
+                    <a href="{{ site.baseurl | replace: '//', '/' }}/archive">Releases</a>
+                </li>-->
+                <li><a class="dropdown-button" href="#" data-activates='drop-example'>Documentação da API&nbsp;&nbsp;<i class="fa fa-caret-down"></i></a>
+                </li>
+                <div id="drop-example" class="dropdown-content">
+                    <li>
+                        <a href="{{ site.baseurl }}{% link docs/1.0/autenticacao.md %}">Autenticação</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}{% link docs/1.0/analise.md %}">Análise</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}{% link docs/1.0/postnotification.md %}">Notificação de Mudança de Status </a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}{% link docs/1.0/fingerprint.md %}">Configuração do Fingerprint </a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}{% link docs/1.0/retrochargeback.md %}">Retroalimentação de Chargeback </a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}{% link docs/1.0/linktransaction.md %}">Associar transação Pagador e Antifraude </a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}{% link docs/1.0/updatestatus.md %}">Update de Status </a>
+                    </li>
+                </div>
+                <!--<li>
+                    <a href="#modal-example" class="modal-trigger">Modal <i class="fa fa-cog"></i></a>
+                </li>-->
+            </ul>
+        </nav>
+        <nav class="iconnav">
+            <ul style="padding-left: 0px;">
+                <li class="hide">
+                    <a href="{{ site.baseurl | replace: '//', '/' }}/"><i class="fa fa-shield fa-fw" style="color: #1E1E1E; font-size: 1.2rem;"></i> <span style="color: #1E1E1E; font-weight: 600; font-size: 1.1rem;">ANTIFRAUDE GATEWAY</span></a>
+                </li>
+                <!--<li class="sicon">
+                    <a href='#search'><i class='fa fa-search'></i></a>
+                </li>-->
+            </ul>
+        </nav>
+        <a href='#menu' class="toggle-link noline">
+            <i class="fa fa-navicon"></i>
+        </a>
+    </div>
+</div>
+
+<div id="modal-example" class="modal color-change">
+    <div class="modal-content">
+        <h2>Change Color Palette</h2>
+        <p>
+            <img id="indigo" alt="color palette preview indigo" src="{{ site.media_folder }}/indigo.jpg">
+            <img id="brown" alt="color palette preview brown" src="{{ site.media_folder }}/brown.jpg">
+            <img id="green" alt="color palette preview green" src="{{ site.media_folder }}/green.jpg">
+            <img id="teal" alt="color palette preview teal" src="{{ site.media_folder }}/teal.jpg">
+        </p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">fechar</a>
+    </div>
+</div>
